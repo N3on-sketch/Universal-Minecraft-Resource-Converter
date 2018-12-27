@@ -13,7 +13,7 @@
 * Java 8 and Python 3
 
 ## Version of this software
-* v1.0.0
+* v1.0.0-pre1
 
 # About This Project
 What you are getting is for the most part the final product but i will be opimizion the program and adding small new fetures in the furture to continue to make this first of it's kind program better and better. Enjoy! 
