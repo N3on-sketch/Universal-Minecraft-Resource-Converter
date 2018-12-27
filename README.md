@@ -9,6 +9,10 @@
   Bedrock Texture Pack -> Resource Pack                                                                                                 
   Bedrock Texture Pack -> Java Texture Pack                                                                                             
 
+## What to download
+* Download the folder called "Universal Minecraft Resource Converter"
+  which contains the jar and python files for the program.
+
 ## Version of this software
 * v1.0.0-beta.1
 
