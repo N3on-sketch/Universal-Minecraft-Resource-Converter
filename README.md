@@ -13,7 +13,8 @@
 * v1.0.0-beta.1
 
 ## Minimum Java/Python Versions
-* Java 8 and Python 3
+* Java 8 
+* Python 3.7
 
 # About This Project
 What you are getting is for the most part the final product but i will be opimizion the program and adding small new fetures in the furture to continue to make this first of it's kind program better and better. Enjoy! 
