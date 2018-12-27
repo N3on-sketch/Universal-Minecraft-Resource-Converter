@@ -20,12 +20,12 @@
 * Java 8 
 * Python 3.7
 
-# About This Project
-What you are getting is for the most part the final product but i will be opimizion the program and adding small new fetures in the furture to continue to make this first of it's kind program better and better. Enjoy! 
+## About This Project
+What you are getting is for the most part the final product but i will be optimizing the program and adding small new fetures in the furture to continue to make this first of it's kind program better and better. Enjoy! 
 
-# Team
-<a name="youtubes"></a>Team Members YouTube Channel's
-* [BJTMastermind (Owner) | I did all the Java and Some Python in the project](https://www.youtube.com/channel/UCiFDXb0SDboAOyZOzQHjw2w)
+# The Team
+Team Members YouTube Channel's
+* [BJTMastermind (Owner) | I did all the Java and some Python in the project](https://www.youtube.com/channel/UCiFDXb0SDboAOyZOzQHjw2w)
 * [Cowboy8625 | Helped me with Python in the project](https://www.youtube.com/channel/UCOMS-wclr-zxd7fC11z7IJg)
 
 # Screen Shots
