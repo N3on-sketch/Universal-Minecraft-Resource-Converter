@@ -26,8 +26,8 @@ What you are getting is for the most part the final product but i will be opimiz
 # Screen Shots
 
 These are the main screens of the program
-![umrc_main_screen1](https://user-images.githubusercontent.com/43012445/48389982-80e16100-e6c5-11e8-99e1-56bf323d52f7.PNG)
-![umrc_main_screen2](https://user-images.githubusercontent.com/43012445/48389982-80e16100-e6c5-11e8-99e1-56bf323d52f7.PNG)
-![umrc_main_screen3](https://user-images.githubusercontent.com/43012445/48389982-80e16100-e6c5-11e8-99e1-56bf323d52f7.PNG)
+![screen3](https://user-images.githubusercontent.com/18742837/50466297-ba66e680-096a-11e9-9704-ee3473eabec0.png)
+![screen1](https://user-images.githubusercontent.com/18742837/50466298-ba66e680-096a-11e9-9316-bc489266bfea.png)
+![screen2](https://user-images.githubusercontent.com/18742837/50466299-ba66e680-096a-11e9-9e0a-d3ab2b8906e4.png)
 
 
