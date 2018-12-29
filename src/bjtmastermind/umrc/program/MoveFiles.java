@@ -28,8 +28,11 @@ public class MoveFiles extends FileWorks {
 				Files.move(moveFile[i].toPath(), moveTo[i].toPath().resolve(moveFile[i].toPath().getFileName()));
 			}
 			
-			File[] delete = {new File(fileCopied+"/mob/cow"),new File(fileCopied+"/mob/creeper"),new File(fileCopied+"/mob/ghast"),new File(fileCopied+"/mob/pig"),new File(fileCopied+"/mob/sheep"),new File(fileCopied+"/mob/skeleton"),
-					new File(fileCopied+"/mob/slime"),new File(fileCopied+"/mob/spider"),new File(fileCopied+"/mob/zombie"),new File(fileCopied+"/gui/container"),new File(fileCopied+"/gui/title"),new File(fileCopied+"/assets")};
+			File[] delete = {new File(fileCopied+"/mob/bed"),new File(fileCopied+"/mob/cow"),new File(fileCopied+"/mob/creeper"),new File(fileCopied+"/mob/ghast"),new File(fileCopied+"/mob/pig"),new File(fileCopied+"/mob/sheep"),new File(fileCopied+"/mob/skeleton"),
+					new File(fileCopied+"/mob/slime"),new File(fileCopied+"/mob/spider"),new File(fileCopied+"/mob/zombie"),new File(fileCopied+"/gui/container"),new File(fileCopied+"/gui/title")};
+			
+			File[] assetsDel = {new File(path+"blockstates"),new File(path+"font"),new File(path+"models/block"),new File(path+"models/item"),new File(path+"models"),new File(path+"texts"),new File(path+"textures/blocks"),new File(path+"textures/colormap"),new File(path+"textures/effect"),
+					new File(path+"textures/font"),new File(path+"textures/items"),new File(path+"textures/map"),new File(path+"textures/models"),new File(path+"textures/particle"),new File(path+"textures"),new File(fileCopied+"/assets/minecraft"),new File(fileCopied+"/assets")};
 			
 			for(int i = 0; i < delete.length; i++) {
 				if(delete[i].isDirectory()) {
@@ -50,6 +53,18 @@ public class MoveFiles extends FileWorks {
 					delete[i].delete();
 				}
 			}
+			for(int i = 0; i < assetsDel.length; i++) {
+				if(assetsDel[i].isDirectory()) {
+					File[] f = assetsDel[i].listFiles();
+					for(File ff : f) {
+						ff.delete();
+					}
+					assetsDel[i].delete();
+				} else {
+					assetsDel[i].delete();
+				}
+			}
+			
 		} else if(FromType == 1 && ToType == 3) {
 			
 		} else if(FromType == 2 && ToType == 1) {

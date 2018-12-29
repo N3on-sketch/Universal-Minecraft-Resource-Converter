@@ -5,10 +5,9 @@ public class Convert extends Main {
 	public static void ResourceToTexture() throws Exception {
 		FileWorks.copyFiles(file, fileCopied);
 		FileWorks.crop();
-		Thread.sleep(3000);
 		FileWorks.stitch();
+		Thread.sleep(7000);
 		FileWorks.renameFiles();
-		Thread.sleep(3000);
 		FileWorks.moveFiles();
 		FileWorks.zip();
 	}
@@ -45,6 +44,7 @@ public class Convert extends Main {
 		FileWorks.copyFiles(file, fileCopied);
 		FileWorks.crop();
 		FileWorks.stitch();
+		Thread.sleep(7000);
 		FileWorks.renameFiles();
 		FileWorks.moveFiles();
 		FileWorks.zip();
