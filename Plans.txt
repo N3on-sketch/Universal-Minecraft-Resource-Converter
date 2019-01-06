@@ -1,13 +1,13 @@
 Plans:
-Move all .py files inside the Jar if possible.
+[!] Move all .py files inside the Jar if possible.
 Merge 3 screens into 1 and just change elements of the screen.
 
 Not for some time Plans:
-If possible replace all Python file functionality with Java code.
+[!] If possible replace all Python file functionality with Java code.
 
 -------------------------
 
-If you know Java vary well and know how to acheive any of these create a feature requiest in Issues with the Java Code,
-it must work for all platforms and say what the code does. Thanks
+If you know Java vary well and know how to acheive any of these with a [!] then create a feature request in Issues 
+with the Java Code, it must work for all platforms and say what the code does. Thanks
 
 -------------------------
