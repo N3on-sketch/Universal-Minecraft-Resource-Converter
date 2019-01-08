@@ -21,7 +21,7 @@
 * Python 3.7
 
 ## About This Project
-What you are getting is for the most part the final product but i will be optimizing the program and adding small new fetures in the furture to continue to make this first of it's kind program better and better. Enjoy! 
+What you are getting is for the most part the final product but i will be optimizing the program and adding small new features in the future to continue to make this first of it's kind program better and better. Enjoy! 
 
 # The Team
 Team Members YouTube Channel's
