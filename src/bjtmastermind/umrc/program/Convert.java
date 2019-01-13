@@ -20,9 +20,10 @@ public class Convert extends Main {
 	
 	public static void TextureToResource() throws Exception {
 		FileWorks.copyFiles(file, fileCopied);
-		FileWorks.unzip(file.toString(), fileCopied.toString());
+		FileWorks.unzip(file+".zip".toString(), fileCopied+".zip".toString());
 		FileWorks.unstitch();
 		FileWorks.renameFiles();
+		Thread.sleep(4599);
 		FileWorks.moveFiles();
 	}
 	
@@ -46,7 +47,8 @@ public class Convert extends Main {
 		FileWorks.stitch();
 		Thread.sleep(7000);
 		FileWorks.renameFiles();
+		Thread.sleep(3000);
 		FileWorks.moveFiles();
-		FileWorks.zip();
+		//FileWorks.zip();
 	}
 }

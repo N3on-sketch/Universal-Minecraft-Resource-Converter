@@ -78,7 +78,7 @@ public class FileWorks extends Main {
 		FileInputStream fis = new FileInputStream(zipInput);
 		ZipInputStream zis = new ZipInputStream(fis);
 		ZipEntry ze = zis.getNextEntry();
-		
+				
 		while(ze != null) {
 			byte[] buf = new byte[1024];
 			String filename = ze.getName();
@@ -101,7 +101,7 @@ public class FileWorks extends Main {
 		}
 		zis.closeEntry();
 		zis.close();
-		fis.close();		
+		fis.close();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -113,17 +113,12 @@ public class FileWorks extends Main {
 //Zip Ends Here and Stitch Starts	
 	public static void stitch() throws IOException {
 		//Uses Python Code "stitch.py"
-		 FileWriter fileWriter = new FileWriter("external-code/variables");
-		 fileWriter.write(file.toString()+"\n");
-		 fileWriter.write(FromType+"\n");
-		 fileWriter.write(ToType+"\n");
-		 fileWriter.close();
 		 try {
 		     @SuppressWarnings("unused")
 			 Process p = Runtime.getRuntime().exec("python external-code/stitch.py");
 		 } catch (IOException e) {
 		 	 e.printStackTrace();
-		 }
+		}
 	}
 //Stitch Ends Here and UnStitch Starts
 	public static void unstitch() throws IOException {
@@ -141,8 +136,7 @@ public class FileWorks extends Main {
 		}
 	}
 //UnStitch Ends Here and renameFiles Starts
-	static String path = fileCopied+"/assets/minecraft/";
-	public static void renameFiles() throws InterruptedException, IOException {
+	public static void renameFiles() throws IOException, InterruptedException {
 		//Partly Uses Python Code "convertpack.py"
 		FileWriter fileWriter = new FileWriter("external-code/variables");
 	    fileWriter.write(file.toString()+"\n");
@@ -155,10 +149,17 @@ public class FileWorks extends Main {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		Thread.sleep(1000);
 		Rename.main();
 	}
 //renameFiles Ends Here and crop Starts
-	public static void crop() {
+	public static void crop() throws IOException {
+		//Partly Uses Python Code "convertpack.py"
+		FileWriter fileWriter = new FileWriter("external-code/variables");
+		fileWriter.write(file.toString()+"\n");
+		fileWriter.write(FromType+"\n");
+		fileWriter.write(ToType+"\n");
+		fileWriter.close();
 		try {
 			@SuppressWarnings("unused")
 			Process p = Runtime.getRuntime().exec("python external-code/crop.py");

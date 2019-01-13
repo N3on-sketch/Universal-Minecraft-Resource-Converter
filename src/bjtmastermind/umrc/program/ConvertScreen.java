@@ -47,22 +47,40 @@ public class ConvertScreen extends Main {
 		JLabel from = new JLabel("From:  " + FromPack);
 		from.setForeground(Color.WHITE);
 		from.setFont(new Font("Minecraftia", Font.PLAIN, 10));
-		from.setBounds(172, 79, 195, 14);
+		from.setBounds(169, 79, 202, 14);
 		window.getContentPane().add(from);
 		
 		JLabel to = new JLabel("To:  " + ToPack);
 		to.setForeground(Color.WHITE);
 		to.setFont(new Font("Minecraftia", Font.PLAIN, 10));
-		to.setBounds(172, 104, 195, 14);
+		to.setBounds(169, 104, 202, 14);
 		window.getContentPane().add(to);
 		
-		JLabel filename = new JLabel("<html>Path: " + file + "</html>");
+		if(FromType == 2 && ToType == 1) {
+		JLabel filename = new JLabel("<html>Path: " + file+".zip" + "</html>");
 		filename.setVerticalAlignment(SwingConstants.TOP);
 		filename.setHorizontalAlignment(SwingConstants.LEFT);
 		filename.setForeground(Color.WHITE);
 		filename.setFont(new Font("Minecraftia", Font.PLAIN, 10));
 		filename.setBounds(10, 164, 520, 255);
 		window.getContentPane().add(filename);
+		} else if(FromType == 2 && ToType == 3) {
+			JLabel filename = new JLabel("<html>Path: " + file+".zip" + "</html>");
+			filename.setVerticalAlignment(SwingConstants.TOP);
+			filename.setHorizontalAlignment(SwingConstants.LEFT);
+			filename.setForeground(Color.WHITE);
+			filename.setFont(new Font("Minecraftia", Font.PLAIN, 10));
+			filename.setBounds(10, 164, 520, 255);
+			window.getContentPane().add(filename);
+		} else {
+			JLabel filename = new JLabel("<html>Path: " + file + "</html>");
+			filename.setVerticalAlignment(SwingConstants.TOP);
+			filename.setHorizontalAlignment(SwingConstants.LEFT);
+			filename.setForeground(Color.WHITE);
+			filename.setFont(new Font("Minecraftia", Font.PLAIN, 10));
+			filename.setBounds(10, 164, 520, 255);
+			window.getContentPane().add(filename);
+		}
 		window.setBounds(100, 100, 546, 459);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		FileConvert();
@@ -89,7 +107,6 @@ public class ConvertScreen extends Main {
 			}else if(FromType == 3 && ToType == 2) {
 				//Bedrock to Java Texture(Ziped)
 				Convert.BedrockToTexture();
-				
 		}		
 	}
 }

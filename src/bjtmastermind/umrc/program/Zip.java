@@ -63,7 +63,20 @@ public class Zip extends FileWorks {
     } else if(FromType == 3 && ToType == 1) {
     	
     } else if(FromType == 3 && ToType == 2) {
+    	File[] deleteFolder = {new File(fileCopied+"/armor"),new File(fileCopied+"/art"),new File(fileCopied+"/environment"),new File(fileCopied+"/gui"),new File(fileCopied+"/item"),new File(fileCopied+"/lang"),new File(fileCopied+"/misc"),new File(fileCopied+"/mob"),
+    			new File(fileCopied+"/terrain"),new File(fileCopied+"/title"),new File(fileCopied+"/pack.png"),new File(fileCopied+"/pack.txt"),new File(fileCopied+"/particles.png"),new File(fileCopied+"/terrain.png"),new File(fileCopied.toString())};
     	
+    	for(int i = 0; i < deleteFolder.length; i++) {
+			if(deleteFolder[i].isDirectory()) {
+				File[] f = deleteFolder[i].listFiles();
+				for(File ff : f) {
+					ff.delete();
+				}
+				deleteFolder[i].delete();
+			} else {
+				deleteFolder[i].delete();
+			}
+		}
       }
     }catch(IOException ex){
        ex.printStackTrace();

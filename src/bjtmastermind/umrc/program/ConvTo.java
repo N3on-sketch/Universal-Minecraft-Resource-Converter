@@ -57,9 +57,12 @@ public class ConvTo extends Main {
 		window.getContentPane().add(platform);
 		
 		JLabel javareicon = new JLabel("");
+		javareicon.setBounds(123, 80, 80, 66);
 		javareicon.setToolTipText("Java Resource Pack");
-		Image jereimg = new ImageIcon(this.getClass().getResource("/javarepk.png")).getImage();
-		javareicon.setIcon(new ImageIcon(jereimg));
+		Image rimg = new ImageIcon(this.getClass().getResource("/javarepk.png")).getImage();
+		Image rimg1 = rimg.getScaledInstance(javareicon.getWidth(), javareicon.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon jereimg = new ImageIcon(rimg1);
+		javareicon.setIcon(jereimg);
 		javareicon.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if(FromType == 1) {
@@ -90,13 +93,15 @@ public class ConvTo extends Main {
 				}
 			}
 		});
-		javareicon.setBounds(123, 72, 80, 80);
 		window.getContentPane().add(javareicon);
 		
 		JLabel javatxicon = new JLabel("");
+		javatxicon.setBounds(230, 80, 80, 66);
 		javatxicon.setToolTipText("Java Texture Pack");
-		Image jetximg = new ImageIcon(this.getClass().getResource("/javatxpk.png")).getImage();
-		javatxicon.setIcon(new ImageIcon(jetximg));
+		Image timg = new ImageIcon(this.getClass().getResource("/javatxpk.png")).getImage();
+		Image timg1 = timg.getScaledInstance(javatxicon.getWidth(), javatxicon.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon jetximg = new ImageIcon(timg1);
+		javatxicon.setIcon(jetximg);
 		javatxicon.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if(FromType == 1) {
@@ -126,13 +131,15 @@ public class ConvTo extends Main {
 				}
 			}
 		});
-		javatxicon.setBounds(230, 72, 80, 80);
 		window.getContentPane().add(javatxicon);
 		
 		JLabel bedrockicon = new JLabel("");
+		bedrockicon.setBounds(325, 51, 105, 105);
 		bedrockicon.setToolTipText("Bedrock Texture Pack");
-		Image beimg = new ImageIcon(this.getClass().getResource("/bedrock.png")).getImage();
-		bedrockicon.setIcon(new ImageIcon(beimg));
+		Image img = new ImageIcon(this.getClass().getResource("/bedrock.png")).getImage();
+		Image img1 = img.getScaledInstance(bedrockicon.getWidth(), bedrockicon.getHeight(), Image.SCALE_SMOOTH);
+		ImageIcon beimg = new ImageIcon(img1);
+		bedrockicon.setIcon(beimg);
 		bedrockicon.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if(FromType == 1) {
@@ -163,7 +170,6 @@ public class ConvTo extends Main {
 				}
 			}
 		});
-		bedrockicon.setBounds(336, 72, 80, 80);
 		window.getContentPane().add(bedrockicon);
 		
 		JButton Continue = new JButton("Continue");
@@ -171,8 +177,34 @@ public class ConvTo extends Main {
 			public void actionPerformed(ActionEvent e) {
 				if (ToType == 0) {
 					Dialog2.main();
-				}else {
+				} else if(FromType == 1 && ToType == 2) {
 					fileCopied = new File(file + "-Converted");
+					path = fileCopied+"/assets/minecraft/";
+					ConvertScreen.main();
+					window.setVisible(false);
+				} else if(FromType == 1 && ToType == 3) {
+					fileCopied = new File(file + "-Converted");
+					ConvertScreen.main();
+					window.setVisible(false);
+				} else if(FromType == 2 && ToType == 1) {
+					String file2 = file.toString();
+					file2 = file2.substring(0, file2.lastIndexOf('.'));
+					file = new File(file2);
+					fileCopied = new File(file + "-Converted");
+					path = fileCopied+"/assets/minecraft/";
+					ConvertScreen.main();
+					window.setVisible(false);
+				} else if(FromType == 2 && ToType == 3) {
+					fileCopied = new File(file + "-Converted");
+					ConvertScreen.main();
+					window.setVisible(false);
+				} else if(FromType == 3 && ToType == 1) {
+					fileCopied = new File(file + "-Converted");
+					ConvertScreen.main();
+					window.setVisible(false);
+				} else if(FromType == 3 && ToType == 2) {
+					fileCopied = new File(file + "-Converted");
+					path = fileCopied+"/textures/";
 					ConvertScreen.main();
 					window.setVisible(false);
 				}
@@ -180,18 +212,18 @@ public class ConvTo extends Main {
 			}
 		});
 		
-		JLabel intrucs = new JLabel("<html>[Instructions]: Now click the icon of the platform you want your pack to work for, then find the pack your converting from, then press 'Continue' button so the program can convert a copy of it.</html>");
+		JLabel intrucs = new JLabel("<html>[Instructions]: Click the icon of the platform you want your pack to work for, find the pack your converting from, press the 'Continue' button so the program can convert a copy of it.</html>");
 		intrucs.setForeground(Color.WHITE);
 		intrucs.setFont(new Font("Minecraftia", Font.PLAIN, 12));
 		intrucs.setVerticalAlignment(SwingConstants.TOP);
 		intrucs.setBounds(110, 163, 335, 90);
 		window.getContentPane().add(intrucs);
 		
-		JLabel example = new JLabel("<html>[Example]: If you want to convert a Java Resource Pack to a Java Texture Pack you will want to click the icon that says 'Texture' then find the Resoure Pack.</html>");
+		JLabel example = new JLabel("<html>[Example]: If you want to convert a Java Resource Pack to a Java Texture Pack you will want to click the icon that says 'Texture Pack' then find the Resource Pack.</html>");
 		example.setForeground(Color.WHITE);
 		example.setFont(new Font("Minecraftia", Font.PLAIN, 12));
 		example.setVerticalAlignment(SwingConstants.TOP);
-		example.setBounds(110, 264, 335, 72);
+		example.setBounds(110, 264, 335, 90);
 		window.getContentPane().add(example);
 		Continue.setBounds(441, 396, 89, 23);
 		window.getContentPane().add(Continue);
