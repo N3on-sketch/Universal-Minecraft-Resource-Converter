@@ -14,7 +14,7 @@
   which contains the jar and python files for the program.
 
 ## Version of this software
-* v1.0.0-beta.2
+* v1.0.0-beta.3
 
 ## Minimum Java/Python Versions
 * Java 8 
