@@ -1,6 +1,8 @@
 Plans:
 [!] Move all .py files inside the Jar if possible.
-Merge 3 screens into 1 and just change elements of the screen.
+Merge all 3 screens into 1 and just change elements of the screen.
+Move all file renames into json files
+Move all file location moves into json files 
 
 Not for some time Plans:
 [!] If possible replace all Python file functionality with Java code.
