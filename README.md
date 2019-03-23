@@ -14,7 +14,7 @@
   which contains the jar and python files for the program.
 
 ## Version of this software
-* v1.0.0-beta.3
+* v1.0.0-beta.2
 
 ## Minimum Java/Python Versions
 * Java 8 
@@ -32,6 +32,6 @@ Team Members YouTube Channel's
 
 These are the main screens of the program
 
-![screen1](https://user-images.githubusercontent.com/18742837/53995701-dbcf1600-4103-11e9-8685-e53437823d19.png)
-![screen2](https://user-images.githubusercontent.com/18742837/53995714-ee494f80-4103-11e9-997c-72b79565a2a4.png)
+![screen1](https://user-images.githubusercontent.com/18742837/50466414-5f81bf00-096b-11e9-925b-2a2791600462.png)
+![screen2](https://user-images.githubusercontent.com/18742837/50466412-5f81bf00-096b-11e9-90f7-2e712069a3e2.png)
 ![screen3](https://user-images.githubusercontent.com/18742837/50466297-ba66e680-096a-11e9-9704-ee3473eabec0.png)

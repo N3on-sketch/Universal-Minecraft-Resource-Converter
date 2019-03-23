@@ -20,7 +20,17 @@ elif FromType == 1 and ToType == 3:
 elif FromType == 2 and ToType == 1:
     pass
 elif FromType == 2 and ToType == 3:
-    pass
+    path = fileCopied+"/textures/"
+    tga_textures = (path+"entity/ghast_shooting.tga",path+"entity/sheep.tga")
+    png_textures = (path+"entity/ghast_shooting.png",path+"entity/sheep.png")
+
+    try:
+        for i in range(len(png_textures)):
+            img = Image.open(png_textures[i])
+            img.save(tga_textures[i])
+            remove(png_textures[i])
+    except:
+        pass
 elif FromType == 3 and ToType == 1:
     pass
 elif FromType == 3 and ToType == 2:
@@ -29,9 +39,9 @@ elif FromType == 3 and ToType == 2:
     png_textures = (path+"entity/ghast/ghast_shooting.png",path+"entity/sheep/sheep.png")
 
     try:
-        for img in tga_textures:
-            img = Image.open(tga_textures[1])
-            img.save(png_textures[1])
-            remove(tga_textures[1])
+        for i in range(len(tga_textures)):
+            img = Image.open(tga_textures[i])
+            img.save(png_textures[i])
+            remove(tga_textures[i])
     except:
         pass
