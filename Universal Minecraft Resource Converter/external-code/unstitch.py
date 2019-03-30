@@ -19,7 +19,11 @@ elif FromType == 1 and ToType == 3:
     pass
 elif FromType == 2 and ToType == 1:
     path = fileCopied+"/assets/minecraft/textures/blocks/"
-    os.makedirs(path)
+    try:
+        if not os.path.exists(path):
+            os.makedirs(path)
+    except OSError:
+        print("Error: Creating directory. " + path)
     base = Image.open(fileCopied+"/terrain.png")
     text_names = [path+"grass_top.png",path+"stone.png",path+"dirt.png",path+"grass_side.png",path+"planks_oak.png",path+"stone_slab_side.png",path+"stone_slab_top.png",path+"brick.png",path+"tnt_side.png",path+"tnt_top.png",path+"tnt_bottom.png",path+"web.png",path+"flower_rose.png",path+"flower_dandelion.png","external-code/empty.png",path+"sapling_oak.png",
                   path+"cobblestone.png",path+"bedrock.png",path+"sand.png",path+"gravel.png",path+"log_oak.png",path+"log_oak_top.png",path+"iron_block.png",path+"gold_block.png",path+"diamond_block.png",path+"emerald_block.png","external-code/empty.png","external-code/empty.png",path+"mushroom_red.png",path+"mushroom_brown.png",path+"sapling_jungle.png","external-code/empty.png",
@@ -37,28 +41,168 @@ elif FromType == 2 and ToType == 1:
                   path+"sandstone_bottom.png",path+"wool_colored_cyan.png",path+"wool_colored_orange.png",path+"redstone_lamp_off.png",path+"redstone_lamp_on.png",path+"stonebrick_carved.png",path+"planks_birch.png",path+"anvil_base.png",path+"anvil_top_damaged_1.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
                   path+"nether_brick.png",path+"wool_colored_silver.png",path+"nether_wart_stage_0.png",path+"nether_wart_stage_1.png",path+"nether_wart_stage_2.png",path+"sandstone_carved.png",path+"sandstone_smooth.png",path+"anvil_top_damaged_0.png",path+"anvil_top_damaged_2.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
 	  path+"destroy_stage_0.png",path+"destroy_stage_1.png",path+"destroy_stage_2.png",path+"destroy_stage_3.png",path+"destroy_stage_4.png",path+"destroy_stage_5.png",path+"destroy_stage_6.png",path+"destroy_stage_7.png",path+"destroy_stage_8.png",path+"destroy_stage_9.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png"]
-    img_top = 0
-    img_bottom = 16
-    img_right = 16
-    img_left = 0
 
     i = 0
-    for img in text_names:
-        if img_right == 256:
-            area = (img_left,img_top,img_right,img_bottom)
-            img_right = 0
-            img_bottom += 16
-            img_left = -16
-            img_top += 16
-        else:
-            area = (img_left,img_top,img_right,img_bottom)
-            img_left += 16
-            img_right += 16
-            newimg = Image.new("RGBA", (16,16), (0, 0, 0, 0))
-            newimg = base.crop(area)
-            newimg.save(text_names[i], "PNG")
-            i += 1
-   
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,0,x2,16)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+        
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,16,x2,32)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,32,x2,48)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,48,x2,64)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,64,x2,80)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,80,x2,96)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,96,x2,112)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,112,x2,128)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,128,x2,144)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,144,x2,160)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,160,x2,176)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,176,x2,192)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,192,x2,208)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,208,x2,224)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,224,x2,240)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,240,x2,256)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+        
 elif FromType == 2 and ToType == 3:
     path = fileCopied+"/textures/blocks/"
     try:
@@ -82,28 +226,168 @@ elif FromType == 2 and ToType == 3:
                   path+"sandstone_normal.png",path+"wool_colored_purple.png",path+"wool_colored_magenta.png",path+"rail_detector.png",path+"leaves_jungle.png","external-code/empty.png",path+"planks_spruce.png",path+"planks_jungle.png",path+"carrots_stage_0.png",path+"carrots_stage_1.png",path+"carrots_stage_2.png",path+"carrots_stage_3.png",path+"potatoes_stage_3.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
                   path+"sandstone_bottom.png",path+"wool_colored_cyan.png",path+"wool_colored_orange.png",path+"redstone_lamp_off.png",path+"redstone_lamp_on.png",path+"stonebrick_carved.png",path+"planks_birch.png",path+"anvil_base.png",path+"anvil_top_damaged_1.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
                   path+"nether_brick.png",path+"wool_colored_silver.png",path+"nether_wart_stage_0.png",path+"nether_wart_stage_1.png",path+"nether_wart_stage_2.png",path+"sandstone_carved.png",path+"sandstone_smooth.png",path+"anvil_top_damaged_0.png",path+"anvil_top_damaged_2.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-	  path+"destroy_stage_0.png",path+"destroy_stage_1.png",path+"destroy_stage_2.png",path+"destroy_stage_3.png",path+"destroy_stage_4.png",path+"destroy_stage_5.png",path+"destroy_stage_6.png",path+"destroy_stage_7.png",path+"destroy_stage_8.png",path+"destroy_stage_9.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png"]
-    img_top = 0
-    img_bottom = 16
-    img_right = 16
-    img_left = 0
+	  path+"destroy_stage_0.png",path+"destroy_stage_1.png",path+"destroy_stage_2.png",path+"destroy_stage_3.png",path+"destroy_stage_4.png",path+"destroy_stage_5.png",path+"destroy_stage_6.png",path+"destroy_stage_7.png",path+"destroy_stage_8.png",path+"destroy_stage_9.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png"]
 
     i = 0
-    for img in text_names:
-        if img_right == 256:
-            area = (img_left,img_top,img_right,img_bottom)
-            img_right = 0
-            img_bottom += 16
-            img_left = -16
-            img_top += 16
-        else:
-            area = (img_left,img_top,img_right,img_bottom)
-            img_left += 16
-            img_right += 16
-            newimg = Image.new("RGBA", (16,16), (0, 0, 0, 0))
-            newimg = base.crop(area)
-            newimg.save(text_names[i], "PNG")
-            i += 1
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,0,x2,16)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+        
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,16,x2,32)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,32,x2,48)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,48,x2,64)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,64,x2,80)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,80,x2,96)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,96,x2,112)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,112,x2,128)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,128,x2,144)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,144,x2,160)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,160,x2,176)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,176,x2,192)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,192,x2,208)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,208,x2,224)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,224,x2,240)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
+
+    x1 = 0
+    x2 = 16
+    for img in range(16):
+        area = (x1,240,x2,256)
+        img = base.crop(area)
+        img.save(text_names[i], "PNG")
+        x1 += 16
+        x2 += 16
+        i += 1
 
 elif FromType == 3 and ToType == 1:
     pass
