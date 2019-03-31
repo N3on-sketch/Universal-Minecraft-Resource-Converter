@@ -32,6 +32,6 @@ Team Members YouTube Channel's
 
 These are the main screens of the program
 
-![screen1](https://user-images.githubusercontent.com/18742837/50466414-5f81bf00-096b-11e9-925b-2a2791600462.png)
-![screen2](https://user-images.githubusercontent.com/18742837/50466412-5f81bf00-096b-11e9-90f7-2e712069a3e2.png)
+![screen1](https://user-images.githubusercontent.com/18742837/55294490-b5358f80-53d0-11e9-882b-a70b4f87d611.png)
+![screen2](https://user-images.githubusercontent.com/18742837/55294496-c2527e80-53d0-11e9-9b1f-38d26f2aecb1.png)
 ![screen3](https://user-images.githubusercontent.com/18742837/50466297-ba66e680-096a-11e9-9704-ee3473eabec0.png)
