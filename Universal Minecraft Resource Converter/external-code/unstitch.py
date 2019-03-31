@@ -25,183 +25,48 @@ elif FromType == 2 and ToType == 1:
     except OSError:
         print("Error: Creating directory. " + path)
     base = Image.open(fileCopied+"/terrain.png")
-    text_names = [path+"grass_top.png",path+"stone.png",path+"dirt.png",path+"grass_side.png",path+"planks_oak.png",path+"stone_slab_side.png",path+"stone_slab_top.png",path+"brick.png",path+"tnt_side.png",path+"tnt_top.png",path+"tnt_bottom.png",path+"web.png",path+"flower_rose.png",path+"flower_dandelion.png","external-code/empty.png",path+"sapling_oak.png",
-                  path+"cobblestone.png",path+"bedrock.png",path+"sand.png",path+"gravel.png",path+"log_oak.png",path+"log_oak_top.png",path+"iron_block.png",path+"gold_block.png",path+"diamond_block.png",path+"emerald_block.png","external-code/empty.png","external-code/empty.png",path+"mushroom_red.png",path+"mushroom_brown.png",path+"sapling_jungle.png","external-code/empty.png",
-                  path+"gold_ore.png",path+"iron_ore.png",path+"coal_ore.png",path+"bookshelf.png",path+"cobblestone_mossy.png",path+"obsidian.png",path+"grass_side_overlay.png",path+"tallgrass.png",path+"grass_top.png",path+"beacon.png","external-code/empty.png",path+"crafting_table_top.png",path+"furnace_front_off.png",path+"furnace_side.png",path+"dispenser_front_horizontal.png","external-code/empty.png",
-                  path+"sponge.png",path+"glass.png",path+"diamond_ore.png",path+"redstone_ore.png",path+"leaves_oak.png","external-code/empty.png",path+"stonebrick.png",path+"deadbush.png",path+"fern.png","external-code/empty.png","external-code/empty.png",path+"crafting_table_side.png",path+"crafting_table_front.png",path+"furnace_front_on.png",path+"furnace_top.png",path+"sapling_spruce.png",
-                  path+"wool_colored_white.png",path+"mob_spawner.png",path+"snow.png",path+"ice.png",path+"grass_side_snowed.png",path+"cactus_top.png",path+"cactus_side.png",path+"cactus_bottom.png",path+"clay.png",path+"reeds.png",path+"jukebox_side.png",path+"jukebox_top.png",path+"waterlily.png",path+"mycelium_side.png",path+"mycelium_top.png",path+"sapling_birch.png",
-                  path+"torch_on.png",path+"door_wood_upper.png",path+"door_iron_upper.png",path+"ladder.png",path+"trapdoor.png",path+"iron_bars.png",path+"farmland_wet.png",path+"farmland_dry.png",path+"wheat_stage_0.png",path+"wheat_stage_1.png",path+"wheat_stage_2.png",path+"wheat_stage_3.png",path+"wheat_stage_4.png",path+"wheat_stage_5.png",path+"wheat_stage_6.png",path+"wheat_stage_7.png",
-                  path+"lever.png",path+"door_wood_lower.png",path+"door_iron_lower.png",path+"redstone_torch_on.png",path+"stonebrick_mossy.png",path+"stonebrick_cracked.png",path+"pumpkin_top.png",path+"netherrack.png",path+"soul_sand.png",path+"glowstone.png",path+"piston_top_sticky.png",path+"piston_top_normal.png",path+"piston_side.png",path+"piston_bottom.png",path+"piston_inner.png",path+"pumpkin_stem_disconnected.png",
-                  path+"rail_normal_turned.png",path+"wool_colored_black.png",path+"wool_colored_gray.png",path+"redstone_torch_off.png",path+"log_spruce.png",path+"log_birch.png",path+"pumpkin_side.png",path+"pumpkin_face_off.png",path+"pumpkin_face_on.png",path+"cake_top.png",path+"cake_side.png",path+"cake_inner.png",path+"cake_bottom.png",path+"mushroom_block_skin_red.png",path+"mushroom_block_skin_brown.png",path+"pumpkin_stem_connected.png",
-                  path+"rail_normal.png",path+"wool_colored_red.png",path+"wool_colored_pink.png",path+"repeater_off.png",path+"leaves_spruce.png","external-code/empty.png",path+"bed_feet_top.png",path+"bed_head_top.png",path+"melon_side.png",path+"melon_top.png",path+"cauldron_top.png",path+"cauldron_inner.png","external-code/empty.png",path+"mushroom_block_skin_stem.png",path+"mushroom_block_inside.png",path+"vine.png",
-                  path+"lapis_block.png",path+"wool_colored_green.png",path+"wool_colored_lime.png",path+"repeater_on.png",path+"glass_pane_top.png",path+"bed_feet_end.png",path+"bed_feet_side.png",path+"bed_head_side.png",path+"bed_head_end.png",path+"log_jungle.png",path+"cauldron_side.png",path+"cauldron_bottom.png",path+"brewing_stand_base.png",path+"brewing_stand.png",path+"endframe_top.png",path+"endframe_side.png",
-                  path+"lapis_ore.png",path+"wool_colored_brown.png",path+"wool_colored_yellow.png",path+"rail_golden.png",path+"redstone_dust_dot.png",path+"redstone_dust_line0.png",path+"enchanting_table_top.png",path+"dragon_egg.png",path+"cocoa_stage_2.png",path+"cocoa_stage_1.png",path+"cocoa_stage_0.png",path+"emerald_ore.png",path+"trip_wire_source.png",path+"trip_wire.png",path+"endframe_eye.png",path+"end_stone.png",
-                  path+"sandstone_top.png",path+"wool_colored_blue.png",path+"wool_colored_light_blue.png",path+"rail_golden_powered.png","external-code/empty.png","external-code/empty.png",path+"enchanting_table_side.png",path+"enchanting_table_bottom.png",path+"command_block_back.png",path+"itemframe_background.png",path+"flower_pot.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"sandstone_normal.png",path+"wool_colored_purple.png",path+"wool_colored_magenta.png",path+"rail_detector.png",path+"leaves_jungle.png","external-code/empty.png",path+"planks_spruce.png",path+"planks_jungle.png",path+"carrots_stage_0.png",path+"carrots_stage_1.png",path+"carrots_stage_2.png",path+"carrots_stage_3.png",path+"potatoes_stage_3.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"sandstone_bottom.png",path+"wool_colored_cyan.png",path+"wool_colored_orange.png",path+"redstone_lamp_off.png",path+"redstone_lamp_on.png",path+"stonebrick_carved.png",path+"planks_birch.png",path+"anvil_base.png",path+"anvil_top_damaged_1.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"nether_brick.png",path+"wool_colored_silver.png",path+"nether_wart_stage_0.png",path+"nether_wart_stage_1.png",path+"nether_wart_stage_2.png",path+"sandstone_carved.png",path+"sandstone_smooth.png",path+"anvil_top_damaged_0.png",path+"anvil_top_damaged_2.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-	  path+"destroy_stage_0.png",path+"destroy_stage_1.png",path+"destroy_stage_2.png",path+"destroy_stage_3.png",path+"destroy_stage_4.png",path+"destroy_stage_5.png",path+"destroy_stage_6.png",path+"destroy_stage_7.png",path+"destroy_stage_8.png",path+"destroy_stage_9.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png","external-code/empty2.png"]
-
+    names = ["grass_top.png","stone.png","dirt.png","grass_side.png","planks_oak.png","stone_slab_side.png","stone_slab_top.png","brick.png","tnt_side.png","tnt_top.png","tnt_bottom.png","web.png","flower_rose.png","flower_dandelion.png","none","sapling_oak.png",
+                  "cobblestone.png","bedrock.png","sand.png","gravel.png","log_oak.png","log_oak_top.png","iron_block.png","gold_block.png","diamond_block.png","emerald_block.png","none","none","mushroom_red.png","mushroom_brown.png","sapling_jungle.png","none",
+                  "gold_ore.png","iron_ore.png","coal_ore.png","bookshelf.png","cobblestone_mossy.png","obsidian.png","grass_side_overlay.png","tallgrass.png","grass_top.png","beacon.png","none","crafting_table_top.png","furnace_front_off.png","furnace_side.png","dispenser_front_horizontal.png","none",
+                  "sponge.png","glass.png","diamond_ore.png","redstone_ore.png","leaves_oak.png","none","stonebrick.png","deadbush.png","fern.png","none","none","crafting_table_side.png","crafting_table_front.png","furnace_front_on.png","furnace_top.png","sapling_spruce.png",
+                  "wool_colored_white.png","mob_spawner.png","snow.png","ice.png","grass_side_snowed.png","cactus_top.png","cactus_side.png","cactus_bottom.png","clay.png","reeds.png","jukebox_side.png","jukebox_top.png","waterlily.png","mycelium_side.png","mycelium_top.png","sapling_birch.png",
+                  "torch_on.png","door_wood_upper.png","door_iron_upper.png","ladder.png","trapdoor.png","iron_bars.png","farmland_wet.png","farmland_dry.png","wheat_stage_0.png","wheat_stage_1.png","wheat_stage_2.png","wheat_stage_3.png","wheat_stage_4.png","wheat_stage_5.png","wheat_stage_6.png","wheat_stage_7.png",
+                  "lever.png","door_wood_lower.png","door_iron_lower.png","redstone_torch_on.png","stonebrick_mossy.png","stonebrick_cracked.png","pumpkin_top.png","netherrack.png","soul_sand.png","glowstone.png","piston_top_sticky.png","piston_top_normal.png","piston_side.png","piston_bottom.png","piston_inner.png","pumpkin_stem_disconnected.png",
+                  "rail_normal_turned.png","wool_colored_black.png","wool_colored_gray.png","redstone_torch_off.png","log_spruce.png","log_birch.png","pumpkin_side.png","pumpkin_face_off.png","pumpkin_face_on.png","cake_top.png","cake_side.png","cake_inner.png","cake_bottom.png","mushroom_block_skin_red.png","mushroom_block_skin_brown.png","pumpkin_stem_connected.png",
+                  "rail_normal.png","wool_colored_red.png","wool_colored_pink.png","repeater_off.png","leaves_spruce.png","none","bed_feet_top.png","bed_head_top.png","melon_side.png","melon_top.png","cauldron_top.png","cauldron_inner.png","none","mushroom_block_skin_stem.png","mushroom_block_inside.png","vine.png",
+                  "lapis_block.png","wool_colored_green.png","wool_colored_lime.png","repeater_on.png","glass_pane_top.png","bed_feet_end.png","bed_feet_side.png","bed_head_side.png","bed_head_end.png","log_jungle.png","cauldron_side.png","cauldron_bottom.png","brewing_stand_base.png","brewing_stand.png","endframe_top.png","endframe_side.png",
+                  "lapis_ore.png","wool_colored_brown.png","wool_colored_yellow.png","rail_golden.png","redstone_dust_dot.png","redstone_dust_line0.png","enchanting_table_top.png","dragon_egg.png","cocoa_stage_2.png","cocoa_stage_1.png","cocoa_stage_0.png","emerald_ore.png","trip_wire_source.png","trip_wire.png","endframe_eye.png","end_stone.png",
+                  "sandstone_top.png","wool_colored_blue.png","wool_colored_light_blue.png","rail_golden_powered.png","none","none","enchanting_table_side.png","enchanting_table_bottom.png","command_block_back.png","itemframe_background.png","flower_pot.png","none","none","none","none","none",
+                  "sandstone_normal.png","wool_colored_purple.png","wool_colored_magenta.png","rail_detector.png","leaves_jungle.png","none","planks_spruce.png","planks_jungle.png","carrots_stage_0.png","carrots_stage_1.png","carrots_stage_2.png","carrots_stage_3.png","potatoes_stage_3.png","none","none","none",
+                  "sandstone_bottom.png","wool_colored_cyan.png","wool_colored_orange.png","redstone_lamp_off.png","redstone_lamp_on.png","stonebrick_carved.png","planks_birch.png","anvil_base.png","anvil_top_damaged_1.png","none","none","none","none","none","none","none",
+                  "nether_brick.png","wool_colored_silver.png","nether_wart_stage_0.png","nether_wart_stage_1.png","nether_wart_stage_2.png","sandstone_carved.png","sandstone_smooth.png","anvil_top_damaged_0.png","anvil_top_damaged_2.png","none","none","none","none","none","none","none",
+	  "destroy_stage_0.png","destroy_stage_1.png","destroy_stage_2.png","destroy_stage_3.png","destroy_stage_4.png","destroy_stage_5.png","destroy_stage_6.png","destroy_stage_7.png","destroy_stage_8.png","destroy_stage_9.png","none","none","none","none","none","none"]
     i = 0
+    ii = 0
     x1 = 0
+    y1 = 0
     x2 = 16
-    for img in range(16):
-        area = (x1,0,x2,16)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-        
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,16,x2,32)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,32,x2,48)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,48,x2,64)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,64,x2,80)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,80,x2,96)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,96,x2,112)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,112,x2,128)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,128,x2,144)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,144,x2,160)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,160,x2,176)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,176,x2,192)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,192,x2,208)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,208,x2,224)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,224,x2,240)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,240,x2,256)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
+    y2 = 16
+    for img in range(256):
+        if ii == 16:
+            x1 = 0
+            y1 += 16
+            x2 = 16
+            y2 += 16
+            ii = 0
+        elif names[i] == "none":
+            x1 += 16
+            x2 += 16
+            i += 1
+            ii += 1
+        else:
+            area = (x1,y1,x2,y2)
+            img = base.crop(area)
+            img.save(path+names[i], "PNG")
+            x1 += 16
+            x2 += 16
+            i += 1
+            ii += 1
         
 elif FromType == 2 and ToType == 3:
     path = fileCopied+"/textures/blocks/"
@@ -211,183 +76,48 @@ elif FromType == 2 and ToType == 3:
     except OSError:
         print("Error: Creating directory. " + path)
     base = Image.open(fileCopied+"/terrain.png")
-    text_names = [path+"grass_top.png",path+"stone.png",path+"dirt.png",path+"grass_side.png",path+"planks_oak.png",path+"stone_slab_side.png",path+"stone_slab_top.png",path+"brick.png",path+"tnt_side.png",path+"tnt_top.png",path+"tnt_bottom.png",path+"web.png",path+"flower_rose.png",path+"flower_dandelion.png","external-code/empty.png",path+"sapling_oak.png",
-                  path+"cobblestone.png",path+"bedrock.png",path+"sand.png",path+"gravel.png",path+"log_oak.png",path+"log_oak_top.png",path+"iron_block.png",path+"gold_block.png",path+"diamond_block.png",path+"emerald_block.png","external-code/empty.png","external-code/empty.png",path+"mushroom_red.png",path+"mushroom_brown.png",path+"sapling_jungle.png","external-code/empty.png",
-                  path+"gold_ore.png",path+"iron_ore.png",path+"coal_ore.png",path+"bookshelf.png",path+"cobblestone_mossy.png",path+"obsidian.png",path+"grass_side_overlay.png",path+"tallgrass.png",path+"grass_top.png",path+"beacon.png","external-code/empty.png",path+"crafting_table_top.png",path+"furnace_front_off.png",path+"furnace_side.png",path+"dispenser_front_horizontal.png","external-code/empty.png",
-                  path+"sponge.png",path+"glass.png",path+"diamond_ore.png",path+"redstone_ore.png",path+"leaves_oak.png","external-code/empty.png",path+"stonebrick.png",path+"deadbush.png",path+"fern.png","external-code/empty.png","external-code/empty.png",path+"crafting_table_side.png",path+"crafting_table_front.png",path+"furnace_front_on.png",path+"furnace_top.png",path+"sapling_spruce.png",
-                  path+"wool_colored_white.png",path+"mob_spawner.png",path+"snow.png",path+"ice.png",path+"grass_side_snowed.png",path+"cactus_top.png",path+"cactus_side.png",path+"cactus_bottom.png",path+"clay.png",path+"reeds.png",path+"jukebox_side.png",path+"jukebox_top.png",path+"waterlily.png",path+"mycelium_side.png",path+"mycelium_top.png",path+"sapling_birch.png",
-                  path+"torch_on.png",path+"door_wood_upper.png",path+"door_iron_upper.png",path+"ladder.png",path+"trapdoor.png",path+"iron_bars.png",path+"farmland_wet.png",path+"farmland_dry.png",path+"wheat_stage_0.png",path+"wheat_stage_1.png",path+"wheat_stage_2.png",path+"wheat_stage_3.png",path+"wheat_stage_4.png",path+"wheat_stage_5.png",path+"wheat_stage_6.png",path+"wheat_stage_7.png",
-                  path+"lever.png",path+"door_wood_lower.png",path+"door_iron_lower.png",path+"redstone_torch_on.png",path+"stonebrick_mossy.png",path+"stonebrick_cracked.png",path+"pumpkin_top.png",path+"netherrack.png",path+"soul_sand.png",path+"glowstone.png",path+"piston_top_sticky.png",path+"piston_top_normal.png",path+"piston_side.png",path+"piston_bottom.png",path+"piston_inner.png",path+"pumpkin_stem_disconnected.png",
-                  path+"rail_normal_turned.png",path+"wool_colored_black.png",path+"wool_colored_gray.png",path+"redstone_torch_off.png",path+"log_spruce.png",path+"log_birch.png",path+"pumpkin_side.png",path+"pumpkin_face_off.png",path+"pumpkin_face_on.png",path+"cake_top.png",path+"cake_side.png",path+"cake_inner.png",path+"cake_bottom.png",path+"mushroom_block_skin_red.png",path+"mushroom_block_skin_brown.png",path+"pumpkin_stem_connected.png",
-                  path+"rail_normal.png",path+"wool_colored_red.png",path+"wool_colored_pink.png",path+"repeater_off.png",path+"leaves_spruce.png","external-code/empty.png",path+"bed_feet_top.png",path+"bed_head_top.png",path+"melon_side.png",path+"melon_top.png",path+"cauldron_top.png",path+"cauldron_inner.png","external-code/empty.png",path+"mushroom_block_skin_stem.png",path+"mushroom_block_inside.png",path+"vine.png",
-                  path+"lapis_block.png",path+"wool_colored_green.png",path+"wool_colored_lime.png",path+"repeater_on.png",path+"glass_pane_top.png",path+"bed_feet_end.png",path+"bed_feet_side.png",path+"bed_head_side.png",path+"bed_head_end.png",path+"log_jungle.png",path+"cauldron_side.png",path+"cauldron_bottom.png",path+"brewing_stand_base.png",path+"brewing_stand.png",path+"endframe_top.png",path+"endframe_side.png",
-                  path+"lapis_ore.png",path+"wool_colored_brown.png",path+"wool_colored_yellow.png",path+"rail_golden.png",path+"redstone_dust_dot.png",path+"redstone_dust_line0.png",path+"enchanting_table_top.png",path+"dragon_egg.png",path+"cocoa_stage_2.png",path+"cocoa_stage_1.png",path+"cocoa_stage_0.png",path+"emerald_ore.png",path+"trip_wire_source.png",path+"trip_wire.png",path+"endframe_eye.png",path+"end_stone.png",
-                  path+"sandstone_top.png",path+"wool_colored_blue.png",path+"wool_colored_light_blue.png",path+"rail_golden_powered.png","external-code/empty.png","external-code/empty.png",path+"enchanting_table_side.png",path+"enchanting_table_bottom.png",path+"command_block_back.png",path+"itemframe_background.png",path+"flower_pot.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"sandstone_normal.png",path+"wool_colored_purple.png",path+"wool_colored_magenta.png",path+"rail_detector.png",path+"leaves_jungle.png","external-code/empty.png",path+"planks_spruce.png",path+"planks_jungle.png",path+"carrots_stage_0.png",path+"carrots_stage_1.png",path+"carrots_stage_2.png",path+"carrots_stage_3.png",path+"potatoes_stage_3.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"sandstone_bottom.png",path+"wool_colored_cyan.png",path+"wool_colored_orange.png",path+"redstone_lamp_off.png",path+"redstone_lamp_on.png",path+"stonebrick_carved.png",path+"planks_birch.png",path+"anvil_base.png",path+"anvil_top_damaged_1.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-                  path+"nether_brick.png",path+"wool_colored_silver.png",path+"nether_wart_stage_0.png",path+"nether_wart_stage_1.png",path+"nether_wart_stage_2.png",path+"sandstone_carved.png",path+"sandstone_smooth.png",path+"anvil_top_damaged_0.png",path+"anvil_top_damaged_2.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png",
-	  path+"destroy_stage_0.png",path+"destroy_stage_1.png",path+"destroy_stage_2.png",path+"destroy_stage_3.png",path+"destroy_stage_4.png",path+"destroy_stage_5.png",path+"destroy_stage_6.png",path+"destroy_stage_7.png",path+"destroy_stage_8.png",path+"destroy_stage_9.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png","external-code/empty.png"]
-
+    names = ["grass_top.png","stone.png","dirt.png","grass_side.png","planks_oak.png","stone_slab_side.png","stone_slab_top.png","brick.png","tnt_side.png","tnt_top.png","tnt_bottom.png","web.png","flower_rose.png","flower_dandelion.png","none","sapling_oak.png",
+                  "cobblestone.png","bedrock.png","sand.png","gravel.png","log_oak.png","log_oak_top.png","iron_block.png","gold_block.png","diamond_block.png","emerald_block.png","none","none","mushroom_red.png","mushroom_brown.png","sapling_jungle.png","none",
+                  "gold_ore.png","iron_ore.png","coal_ore.png","bookshelf.png","cobblestone_mossy.png","obsidian.png","grass_side_overlay.png","tallgrass.png","grass_top.png","beacon.png","none","crafting_table_top.png","furnace_front_off.png","furnace_side.png","dispenser_front_horizontal.png","none",
+                  "sponge.png","glass.png","diamond_ore.png","redstone_ore.png","leaves_oak.png","none","stonebrick.png","deadbush.png","fern.png","none","none","crafting_table_side.png","crafting_table_front.png","furnace_front_on.png","furnace_top.png","sapling_spruce.png",
+                  "wool_colored_white.png","mob_spawner.png","snow.png","ice.png","grass_side_snowed.png","cactus_top.png","cactus_side.png","cactus_bottom.png","clay.png","reeds.png","jukebox_side.png","jukebox_top.png","waterlily.png","mycelium_side.png","mycelium_top.png","sapling_birch.png",
+                  "torch_on.png","door_wood_upper.png","door_iron_upper.png","ladder.png","trapdoor.png","iron_bars.png","farmland_wet.png","farmland_dry.png","wheat_stage_0.png","wheat_stage_1.png","wheat_stage_2.png","wheat_stage_3.png","wheat_stage_4.png","wheat_stage_5.png","wheat_stage_6.png","wheat_stage_7.png",
+                  "lever.png","door_wood_lower.png","door_iron_lower.png","redstone_torch_on.png","stonebrick_mossy.png","stonebrick_cracked.png","pumpkin_top.png","netherrack.png","soul_sand.png","glowstone.png","piston_top_sticky.png","piston_top_normal.png","piston_side.png","piston_bottom.png","piston_inner.png","pumpkin_stem_disconnected.png",
+                  "rail_normal_turned.png","wool_colored_black.png","wool_colored_gray.png","redstone_torch_off.png","log_spruce.png","log_birch.png","pumpkin_side.png","pumpkin_face_off.png","pumpkin_face_on.png","cake_top.png","cake_side.png","cake_inner.png","cake_bottom.png","mushroom_block_skin_red.png","mushroom_block_skin_brown.png","pumpkin_stem_connected.png",
+                  "rail_normal.png","wool_colored_red.png","wool_colored_pink.png","repeater_off.png","leaves_spruce.png","none","bed_feet_top.png","bed_head_top.png","melon_side.png","melon_top.png","cauldron_top.png","cauldron_inner.png","none","mushroom_block_skin_stem.png","mushroom_block_inside.png","vine.png",
+                  "lapis_block.png","wool_colored_green.png","wool_colored_lime.png","repeater_on.png","glass_pane_top.png","bed_feet_end.png","bed_feet_side.png","bed_head_side.png","bed_head_end.png","log_jungle.png","cauldron_side.png","cauldron_bottom.png","brewing_stand_base.png","brewing_stand.png","endframe_top.png","endframe_side.png",
+                  "lapis_ore.png","wool_colored_brown.png","wool_colored_yellow.png","rail_golden.png","redstone_dust_dot.png","redstone_dust_line0.png","enchanting_table_top.png","dragon_egg.png","cocoa_stage_2.png","cocoa_stage_1.png","cocoa_stage_0.png","emerald_ore.png","trip_wire_source.png","trip_wire.png","endframe_eye.png","end_stone.png",
+                  "sandstone_top.png","wool_colored_blue.png","wool_colored_light_blue.png","rail_golden_powered.png","none","none","enchanting_table_side.png","enchanting_table_bottom.png","command_block_back.png","itemframe_background.png","flower_pot.png","none","none","none","none","none",
+                  "sandstone_normal.png","wool_colored_purple.png","wool_colored_magenta.png","rail_detector.png","leaves_jungle.png","none","planks_spruce.png","planks_jungle.png","carrots_stage_0.png","carrots_stage_1.png","carrots_stage_2.png","carrots_stage_3.png","potatoes_stage_3.png","none","none","none",
+                  "sandstone_bottom.png","wool_colored_cyan.png","wool_colored_orange.png","redstone_lamp_off.png","redstone_lamp_on.png","stonebrick_carved.png","planks_birch.png","anvil_base.png","anvil_top_damaged_1.png","none","none","none","none","none","none","none",
+                  "nether_brick.png","wool_colored_silver.png","nether_wart_stage_0.png","nether_wart_stage_1.png","nether_wart_stage_2.png","sandstone_carved.png","sandstone_smooth.png","anvil_top_damaged_0.png","anvil_top_damaged_2.png","none","none","none","none","none","none","none",
+	  "destroy_stage_0.png","destroy_stage_1.png","destroy_stage_2.png","destroy_stage_3.png","destroy_stage_4.png","destroy_stage_5.png","destroy_stage_6.png","destroy_stage_7.png","destroy_stage_8.png","destroy_stage_9.png","none","none","none","none","none","none"]
     i = 0
+    ii = 0
     x1 = 0
+    y1 = 0
     x2 = 16
-    for img in range(16):
-        area = (x1,0,x2,16)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-        
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,16,x2,32)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,32,x2,48)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,48,x2,64)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,64,x2,80)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,80,x2,96)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,96,x2,112)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,112,x2,128)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,128,x2,144)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,144,x2,160)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,160,x2,176)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,176,x2,192)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,192,x2,208)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,208,x2,224)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,224,x2,240)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
-
-    x1 = 0
-    x2 = 16
-    for img in range(16):
-        area = (x1,240,x2,256)
-        img = base.crop(area)
-        img.save(text_names[i], "PNG")
-        x1 += 16
-        x2 += 16
-        i += 1
+    y2 = 16
+    for img in range(256):
+        if ii == 16:
+            x1 = 0
+            y1 += 16
+            x2 = 16
+            y2 += 16
+            ii = 0
+        elif names[i] == "none":
+            x1 += 16
+            x2 += 16
+            i += 1
+            ii += 1
+        else:
+            area = (x1,y1,x2,y2)
+            img = base.crop(area)
+            img.save(path+names[i], "PNG")
+            x1 += 16
+            x2 += 16
+            i += 1
+            ii += 1
 
 elif FromType == 3 and ToType == 1:
     pass
