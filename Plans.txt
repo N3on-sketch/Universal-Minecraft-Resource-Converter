@@ -1,13 +1,14 @@
-Plans:
-[!] Move all .py files inside the Jar if possible.
-Merge 3 screens into 1 and just change elements of the screen.
+Beta 4.1 Plans:
+- Replace all .py files with Java code.
+- Merge 3 screens into 1 and just change elements of the screen.
+- If possible replace all Python file functionality with Java code.
 
-Not for some time Plans:
-[!] If possible replace all Python file functionality with Java code.
+Beta 5 Plans:
+- Finish all conversions.
+- Fix any bugs found.
+- Check if selected pack is a vaild pack.
+- release UMRC 1.0.0 full release.
 
--------------------------
-
-If you know Java vary well and know how to acheive any of these with a [!] then create a feature request in Issues 
-with the Java Code, it must work for all platforms and say what the code does. Thanks
-
--------------------------
+After 1.0.0 Plans:
+- Fix any new bugs.
+- Continue improving code.
