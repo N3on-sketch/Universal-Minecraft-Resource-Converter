@@ -2,12 +2,12 @@
 
   A Minecraft resource converter that will allow you to convert your pack to any of the following combinations
   
-  - Resource Pack -> Java Texture Pack | Finshed: [✅]                                                                                                
-  - Resource Pack -> Bedrock Texture Pack | Finshed: [🇽]                                                                                               
-  - Java Texture Pack -> Resource Pack | Finshed: [✅]                                                                                                
-  - Java Texture Pack -> Bedrock Texture Pack | Finshed: [✅]                                                                                        
-  - Bedrock Texture Pack -> Resource Pack | Finshed: [🇽]                                                                                              
-  - Bedrock Texture Pack -> Java Texture Pack | Finshed: [🇽]                                                                                          
+  - [x] Resource Pack -> Java Texture Pack                                                                                               
+  - [ ] Resource Pack -> Bedrock Texture Pack                                                                                              
+  - [x] Java Texture Pack -> Resource Pack                                                                                               
+  - [x] Java Texture Pack -> Bedrock Texture Pack                                                                                      
+  - [ ] Bedrock Texture Pack -> Resource Pack                                                                                            
+  - [ ] Bedrock Texture Pack -> Java Texture Pack                                                                                          
 
 ## What to download
 * Download the folder called "Universal Minecraft Resource Converter"
