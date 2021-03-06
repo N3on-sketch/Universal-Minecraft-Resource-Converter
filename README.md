@@ -1,6 +1,10 @@
 # Universal Minecraft Resource Converter
 
-  A Minecraft resource converter that will allow you to convert your pack to any of the following combinations                                                                
+  A Minecraft resource converter that will allow you to convert your pack to any of the following combinations<br>
+  Key:
+- [ ] = Not implemented yet.
+- [x] = Has been implemented.
+<hr>
 
 - [x] Resource Pack -> Java Texture Pack                                                                                               
 - [ ] Resource Pack -> Bedrock Texture Pack                                                                                              
@@ -9,7 +13,7 @@
 - [ ] Bedrock Texture Pack -> Resource Pack                                                                                            
 - [ ] Bedrock Texture Pack -> Java Texture Pack 
 
-## How To Use
+## Up To Date Version in Rust
 
 Coming Soon.
 
