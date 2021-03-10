@@ -1,6 +1,7 @@
-# Universal Minecraft Resource Converter
+<h1 align="center">Universal Minecraft Resource Converter</h1>
 
-  A Minecraft resource converter that will allow you to convert your pack to any of the following combinations<br>
+  A Minecraft resource converter that will allow you to convert your pack to any of the following combinations.<br>
+  
   Key:
 - [ ] = Not implemented yet.
 - [x] = Has been implemented.
@@ -24,13 +25,13 @@
 
 ## About This Project
 
-What you are getting is for the most part the final product but i will be optimizing the program and adding small new features in the future to continue to make this first of it's kind program better and better. Enjoy!
+The Universal Minecraft Resource Converter is a tool that allows you to convert a Java Resource Pack, Java Texture Pack, or a Bedrock Resource Pack to one another easily.
 
 # The Team
 
-Team Members YouTube Channel's
-* [BJTMastermind](https://www.youtube.com/channel/UCiFDXb0SDboAOyZOzQHjw2w) (Owner) | I did all the Java and some Python in the project
-* [Cowboy8625](https://www.youtube.com/channel/UCOMS-wclr-zxd7fC11z7IJg) | Helped me with Python in the project
+Team Members Github Links
+* [BJTMastermind](https://www.github.com/BJTMastermind) (Owner) | I did all the Java and some Python in the project
+* [Cowboy8625](https://www.github.com/cowboy8625) | Helped me with Python in the project
 
 # Screen Shots
 
