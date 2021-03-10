@@ -15,7 +15,7 @@
 
 ## Up To Date Version in Rust
 
-Coming Soon.
+[https://github.com/BJTMastermind/UMRC](https://github.com/BJTMastermind/UMRC)
 
 ## Minimum Java / Python Versions
 
